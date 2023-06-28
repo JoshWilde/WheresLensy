@@ -19,7 +19,18 @@ I have used a U-Net to generate images indicating where the lensing feature is i
 The next step was to remove the decoder section and attach a classification section. The encoder section weights were frozen and the classification section was trained using categorical cross entropy loss to classify lenses and non-lenses.
 ![Naberrie](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/UNET_VIS_NAM2022.png)
 
-The reconstructed lens images overall perform well. 
+The reconstructed lens images overall perform well. The table below shows the metrics for the performance of Naberrie on simulated Euclid data. The accuracy, recall, and precision show the performance of the classification of Naberrie. The loss is the root mean squared error of the target image compared to the reconstructed image. 
+
+|     Band    |     Accuracy    |     Recall    |     Precision    |     Loss      |
+|-------------|-----------------|---------------|------------------|---------------|
+|     VIS     |     81.37%      |     0.62      |     0.69         |     0.0024    |
+|     Y       |     60.84%      |     0.61      |     0.61         |     0.0013    |
+|     J       |     63.32%      |     0.64      |     0.60         |     0.0012    |
+|     H       |     64.24%      |     0.64      |     0.65         |     0.0013    |
+
+Below is the AUROC curve for the Euclid simulated bands on the classification results of Naberrie.
+![EuclidAUROC](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/Euclid_AUROC.png)
+
 
 Has this solved the problem?
 
