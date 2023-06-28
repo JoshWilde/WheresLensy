@@ -1,15 +1,15 @@
 # WheresLensy
-![WelcomeNAM](https://github.com/JoshWilde/WheresLensy/blob/main/NAM_Wordart.PNG)
+![WelcomeNAM](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/NAM_Wordart.PNG)
 
 Are you looking for more after a quick introduction or did you miss my talk? Here I will show you the improvements I’ve made to the work in Wilde et al (2022) and lensfindery-mcLensFinderFace.
 
-![RoadSoFar](https://github.com/JoshWilde/WheresLensy/blob/main/supernatural-text.gif)
+![RoadSoFar](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/supernatural-text.gif)
 
 Previously I have trained a CNN (OU-200) to identify strong gravitational lenses in simulated Euclid data. I have investigated what features OU-200 associated with gravitational lensing. I have found that blue ring like features are detected as gravitational lenses by OU-200. I have applied OU-200 to HST data, the majority of images classified as ‘lens’ with high confidence were image artifacts.  
 
 This is of course not the ideal outcome.
 
-![Perry](https://github.com/JoshWilde/WheresLensy/blob/main/perry-the-platypus-phineas-and-ferb.gif)
+![Perry](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/perry-the-platypus-phineas-and-ferb.gif)
 
 The solution is that we need a method to highlight areas of the image that the ML associates with lensing. This would aid human visual inspection in confirming that the model is performing sensibly. 
 
@@ -27,10 +27,10 @@ Well for the key image artefact problem the short answer appears to be yes. The 
 
 I believe this U-Net will aid in the visual inspection of ML discovered gravitational lenses
 
-![HappyMoment](https://github.com/JoshWilde/WheresLensy/blob/main/Fua7.gif)
+![HappyMoment](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/Fua7.gif)
 
 What's next? I need to improve on these results by creating a mask of the image artefacts explicitly. This should hopefully prevent the highest scoring images from being artefacts. I believe the reconstructed lens image and the prediction value have a correlation that could help reduce the number of false positives. 
 
-![GreatInterest](https://github.com/JoshWilde/WheresLensy/blob/main/career-interests-phantom-menace-a3d0qzcnhlgig1v4.gif)
+![GreatInterest](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/career-interests-phantom-menace-a3d0qzcnhlgig1v4.gif)
 
 
