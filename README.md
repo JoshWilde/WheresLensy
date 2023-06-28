@@ -15,7 +15,9 @@ The solution is that we need a method to highlight areas of the image that the M
 
 Who do we do this?
 
-I have used a U-Net to generate images indicating where the lensing feature is in the image. The next step was to remove the decoder section and attach a classification section. The encoder section weights were frozen and the classification section was trained using categorical cross entropy loss to classify lenses and non-lenses.
+I have used a U-Net to generate images indicating where the lensing feature is in the image. This U-Net I have called Naberrie and is shown below.
+The next step was to remove the decoder section and attach a classification section. The encoder section weights were frozen and the classification section was trained using categorical cross entropy loss to classify lenses and non-lenses.
+![Naberrie](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/UNET_VIS_NAM2022.png)
 
 The reconstructed lens images overall perform well. 
 
