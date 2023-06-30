@@ -48,9 +48,9 @@ I believe this U-Net will aid in the visual inspection of ML discovered gravitat
 
 ![HappyMoment](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/Fua7.gif)
 
-I have tried to expand on Naberrie by training multiple Mask R-CNNs to identify gravitational lenses. Three of these models (MRC-95, MRC-99, MRC-995) only classify gravitational lenses and the difference between these models are the threshold value used to create the target mask from the target image. 
+I have tried to expand on Naberrie by training multiple Mask R-CNNs to identify gravitational lenses. Three of these models (MRC-95, MRC-99, MRC-995) only classify gravitational lenses and the difference between these models are the threshold value used to create the target mask from the target image. The other model is MRC-3 which includes the possibility to classify objects as non-lenses. The idea behind this was that by learning what a non-lens looks like it could help th model perform better at finding gravitational lenses.
 ![Mask_RCNN](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/Input_Data_1.png)
-What we can see in the image above is the input image on the left, the lens light in the middle, and the mask of each object on the right.
+What we can see in the image above is the input image on the left, the lens light in the middle, and the mask of each object on the right. The gravitational lens is shown in cyan, the lensing galaxy is shown in red, and any other colour is an additiational galaxy in the image. These galaxies were added to prevent the model from learning to add lenses around all the galaxies in the test set.
 
 
 What's next? I need to improve on these results by creating a mask of the image artefacts explicitly. This should hopefully prevent the highest scoring images from being artefacts. I believe the reconstructed lens image and the prediction value have a correlation that could help reduce the number of false positives. 
