@@ -1,7 +1,7 @@
 # WheresLensy
 ![WelcomeNAM](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/NAM_Wordart.PNG)
 
-Are you looking for more after a quick introduction or did you miss my talk? Here I will show you the improvements I’ve made to the work in Wilde et al (2022) and lensfindery-mcLensFinderFace.
+Are you looking for more after a quick introduction or did you miss my talk? Here I will show you the improvements I’ve made to the work in [Wilde et al (2022)](https://academic.oup.com/mnras/article-abstract/512/3/3464/6544650) and [lensfindery-mcLensFinderFace](https://github.com/JoshWilde/LensFindery-McLensFinderFace).
 
 ![RoadSoFar](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/supernatural-text.gif)
 
