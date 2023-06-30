@@ -49,12 +49,17 @@ I believe this U-Net will aid in the visual inspection of ML discovered gravitat
 ![HappyMoment](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/Fua7.gif)
 
 I have tried to expand on Naberrie by training multiple Mask R-CNNs to identify gravitational lenses. Three of these models (MRC-95, MRC-99, MRC-995) only classify gravitational lenses and the difference between these models are the threshold value used to create the target mask from the target image. The other model is MRC-3 which includes the possibility to classify objects as non-lenses. The idea behind this was that by learning what a non-lens looks like it could help th model perform better at finding gravitational lenses.
-![Mask_RCNN](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/Input_Data_1.png)
-What we can see in the image above is the input image on the left, the lens light in the middle, and the mask of each object on the right. The gravitational lens is shown in cyan, the lensing galaxy is shown in red, and any other colour is an additiational galaxy in the image. These galaxies were added to prevent the model from learning to add lenses around all the galaxies in the test set.
-
+![Mask_RCNN_1](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/Input_Data_1.png)
+![Mask_RCNN_2](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/Input_Data_11.png)
+![Mask_RCNN_3](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/Input_Data_13.png)
+![Mask_RCNN_4](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/Input_Data_3.png)
+What we can see in the image above is the input image on the left, the lens light in the middle, and the mask of each object on the right. The gravitational lens is shown in cyan, the lensing galaxy is shown in red, and any other colour is an additional galaxy in the image. These galaxies were added to prevent the model from learning to add lenses around all the galaxies in the test set.
+The AUROC of the Mask R-CNNs are show below. I believe the performance of MRC-3 is a result of the model performing well at classifying non-lenses correctly. 
+![Mask_AUROC](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/MASK_RCNN_23A_ROC.png)
 
 What's next? I need to improve on these results by creating a mask of the image artefacts explicitly. This should hopefully prevent the highest scoring images from being artefacts. I believe the reconstructed lens image and the prediction value have a correlation that could help reduce the number of false positives. 
 
 ![GreatInterest](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/career-interests-phantom-menace-a3d0qzcnhlgig1v4.gif)
 
-
+If you're interested in this work please feel free to message me or if you're at NAM track me down and ask me in person
+![pint](https://github.com/JoshWilde/WheresLensy/blob/main/NAM/giphy.gif)
